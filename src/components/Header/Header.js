@@ -23,6 +23,7 @@ import IconFont from "../IconFont";
 import NetSelect from "../NetSelect/NetSelect";
 import { getCMSDelayRequest } from "../../utils/getCMS";
 
+// 主网和测试网链接列表，以后都得改成自己的
 const networkList = [
   {
     title: "AELF Mainnet",
@@ -36,18 +37,19 @@ const networkList = [
   },
 ];
 
-const CHAINS_LIST = CHAIN_STATE.chainItem || [];
+
+const CHAINS_LIST = CHAIN_STATE.chainItem || []; // 点ctrl看CHAIN_STATE内容，包含了测试网主链和侧链相关的信息，以后也得改成自己的
 const { SubMenu } = Menu;
 
 const WIDTH_BOUNDARY = 942;
 
-function isPhoneCheckWithWindow() {
+function isPhoneCheckWithWindow() { // 手机UI适配
   const windowWidth = window.innerWidth;
   return isPhoneCheck() || windowWidth <= WIDTH_BOUNDARY;
 }
 
 class BrowserHeader extends PureComponent {
-  constructor() {
+  constructor() { // 构造器
     super();
     this.timerInterval = null;
     this.interval = 300;
@@ -68,7 +70,7 @@ class BrowserHeader extends PureComponent {
   // TODO: Refactoring: Use observer patterns instead of loops
 
 
-  componentDidMount() {
+  componentDidMount() { // React组件，在挂载阶段（网页加载中）执行一些逻辑
     this.setSeleted();
     this.handleResize();
     this.fetchChainList();
@@ -79,12 +81,12 @@ class BrowserHeader extends PureComponent {
 
 
 
-  componentWillUnmount() {
+  componentWillUnmount() { // React组件，在解挂载阶段（网页关闭中）执行一些逻辑
     clearInterval(this.timerInterval);
     window.removeEventListener("scroll", this.handleScroll);
   }
 
-  getSearchStatus() {
+  getSearchStatus() { // 设置搜索状态，根据路由影响布局（子页面里搜索栏移动到最上方）
     const { pathname } = window.location;
     let showSearch = false;
     if (pathname === "/" && document.body.offsetWidth > 768) {
@@ -103,7 +105,7 @@ class BrowserHeader extends PureComponent {
     return showSearch;
   }
 
-  setSeleted() {
+  setSeleted() { // 设置导航栏被选中状态
     this.timerInterval = setInterval(() => {
       let pathname = `/${window.location.pathname.split("/")[1]}`;
       const { current } = this.state;
@@ -139,7 +141,7 @@ class BrowserHeader extends PureComponent {
     }, this.interval);
   }
 
-  handleClick = (e) => {
+  handleClick = (e) => { // 处理点击事件
     clearTimeout(this.timerTimeout);
     this.timerTimeout = setTimeout(() => {
       const { isSmallScreen } = this.props;
@@ -152,7 +154,7 @@ class BrowserHeader extends PureComponent {
     }, this.interval);
   };
 
-  handleResize() {
+  handleResize() { // 处理放大缩小
     const { setIsSmallScreen: mySetIsSmallScreen, isSmallScreen } = this.props;
     const { offsetWidth } = document.body;
 
@@ -163,7 +165,7 @@ class BrowserHeader extends PureComponent {
     }
   }
 
-  handleScroll() {
+  handleScroll() { // 处理滚动
     if (window.location.pathname === "/") {
       const showSearch = this.getSearchStatus();
 
@@ -178,7 +180,7 @@ class BrowserHeader extends PureComponent {
   }
 
   // fetch chain list by network
-  async fetchChainList() {
+  async fetchChainList() { // 根据CMS获取当前链状态
     const data = await getCMSDelayRequest(0);
     if (data && data.chainItem && data.updated_at !== CHAIN_STATE.updated_at)
       this.setState({
@@ -186,14 +188,14 @@ class BrowserHeader extends PureComponent {
       });
   }
 
-  toggleMenu() {
+  toggleMenu() {// 菜单栏样式改变，应该是和手机端有关
     const { showMobileMenu } = this.state
     this.setState({
       showMobileMenu: !showMobileMenu,
     });
   }
 
-  renderPhoneMenu() {
+  renderPhoneMenu() { // 渲染手机端菜单栏，可以暂时不管
     const networkHTML = networkList.map((item) => {
       let classSelected = "";
       if (NETWORK_TYPE === item.netWorkType) {
@@ -218,13 +220,14 @@ class BrowserHeader extends PureComponent {
     );
   }
 
-  renderMenu(menuMode, showMenu = true) {
+  renderMenu(menuMode, showMenu = true) { // 渲染菜单栏，主体需要修改的地方
     const { current } = this.state
     const nodeInfo = JSON.parse(localStorage.getItem("currentChain"));
     const { chain_id } = nodeInfo;
 
     let voteHTML = "";
     let resourceHTML = "";
+    //设置额外的导航
     if (chain_id === config.MAINCHAINID) {
       voteHTML = (
         <Menu.Item key='/vote'>
@@ -241,6 +244,7 @@ class BrowserHeader extends PureComponent {
     const menuClass = showMenu ? "aelf-menu" : "aelf-menu  aelf-menu-hidden";
     const isPhone = isPhoneCheckWithWindow();
 
+    //实际页面内容，所有内容导航栏内容要在这里修改
     return (
       // Add style to solve not responsive collapse in Flex layout
       // Menu will render fully item in flex layout and then collapse it.
@@ -339,7 +343,7 @@ class BrowserHeader extends PureComponent {
     );
   }
 
-  renderMobileMore() {
+  renderMobileMore() { // 手机端渲染2
     return (
       <div
         className={`header-navbar-mobile-more ${NETWORK_TYPE === "MAIN" ? "header-navbar-main-mobile-more" : ""
@@ -386,7 +390,7 @@ class BrowserHeader extends PureComponent {
     );
   }
 
-  render() {
+  render() { // 渲染主函数，负责构建界面
     const menuMode = this.isPhone ? "inline" : "horizontal";
     const mobileMoreHTML = this.isPhone ? this.renderMobileMore() : "";
     const { showMobileMenu, showSearch, chainList } = this.state
@@ -409,6 +413,7 @@ class BrowserHeader extends PureComponent {
     return (
       <div className={`header-fixed-container ${onlyMenu}${isMainNet}`}>
         <div>
+          {/* 最上方页头 */}
           {!this.isPhone && (
             <HeaderTop
               showSearch={showSearch}
@@ -417,18 +422,23 @@ class BrowserHeader extends PureComponent {
               networkList={networkList}
             />
           )}
+
+          {/* 页头主体 */}
           <div className={clsx(headerClass, networkClass)}>
             {mobileMoreHTML}
 
             <nav
               className={clsx('header-navbar', isMain && "header-main-navbar")}
             >
+              {/* 左侧导航栏 */}
               {menuHtml}
               {this.isPhone && showSearch && (
                 <div className='search-mobile-container'>
                   <Search />
                 </div>
               )}
+
+              {/* 右侧链列表 */}
               {!this.isPhone && (
                 <ChainSelect chainList={chainList} />
               )}

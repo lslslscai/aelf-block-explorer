@@ -14,6 +14,7 @@ const TokenIcon = require("../../assets/images/tokenLogo.png");
 
 const { SubMenu, Item: MenuItem } = Menu;
 
+//这个影响的是最上面的一栏，包括图标、about之类的内容
 export default function HeaderTop({
   headerClass,
   menuMode,
@@ -24,14 +25,14 @@ export default function HeaderTop({
   const [price, setPrice] = useState({ USD: 0 });
   const [previousPrice, setPreviousPrice] = useState({ usd: 0 });
 
-  const range = useMemo(() => {
+  const range = useMemo(() => { // 货币价位及其变化
     if (price.USD && previousPrice.usd) {
       return ((price.USD - previousPrice.usd) / previousPrice.usd) * 100;
     }
     return "-";
   }, [price, previousPrice]);
 
-  useEffect(() => {
+  useEffect(() => { //显示汇率，咱们可以不要
     if (CHAIN_ID === "AELF" && NETWORK_TYPE === "MAIN" && !isMobile) {
       const d = new Date()
       const day = d.getDate()
@@ -52,7 +53,7 @@ export default function HeaderTop({
     }
   }, [isMobile]);
 
-  const menuClick = useCallback((item) => {
+  const menuClick = useCallback((item) => { // 点击事件
     const filter = networkList.filter(
       (network) => network.netWorkType === item.key
     );
@@ -66,10 +67,13 @@ export default function HeaderTop({
     >
       <div className={headerClass}>
         <div style={{ display: "flex", alignItems: "center" }}>
+          {/* 图标 */}
           <Svg
             icon={NETWORK_TYPE === "MAIN" ? "main_logo" : "test_logo"}
             className='aelf-logo-container'
           />
+
+          {/* 汇率 */}
           {range !== "-" && (
             <div className='price-container'>
               <img src={TokenIcon} alt="elf" />
@@ -81,6 +85,8 @@ export default function HeaderTop({
             </div>
           )}
         </div>
+
+        {/* 右侧的导航栏 */}
         <div className='header-top-content'>
           {showSearch && <Search />}
           <Menu

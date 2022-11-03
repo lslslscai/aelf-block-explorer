@@ -188,13 +188,14 @@ export default function Home() {
 
   return (
     <div
-      className={`home-container basic-container-new ${
-        isMobile ? "mobile" : ""
-      }`}
+      className={`home-container basic-container-new ${isMobile ? "mobile" : ""
+        }`}
     >
       <section className="banner-section">
         <h2>AELF Explorer</h2>
-        <Search />
+        <Search />  {/* 搜素栏 */}
+
+        {/* 如果是主链，且在手机端，汇率会显示在这里 */}
         {CHAIN_ID === "AELF" && NETWORK_TYPE === "MAIN" && isMobile && (
           <div className="price-info">
             <img src={TokenIcon} />
@@ -207,6 +208,8 @@ export default function Home() {
         )}
       </section>
       <div className="body-container">
+
+        {/* 链信息 */}
         <section className="info-section">
           <ChainInfo
             blockHeight={blockHeight}
@@ -216,7 +219,11 @@ export default function Home() {
             localAccounts={localAccounts}
           />
         </section>
+
+        {/* 最新交易和块 */}
         <section className="latest-section">{latestSection}</section>
+
+        {/* TPS */}
         <section className="chart-section">
           <h3>Transactions Per Minute</h3>
           <TPSChart />

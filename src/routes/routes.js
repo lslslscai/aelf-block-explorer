@@ -32,6 +32,7 @@ const SearchInvalid = lazy(() => import("../pages/SearchInvalid/SearchInvalid"))
 export const PageRouter = () =>
   useRoutes(
     ProposalRouter.concat([
+      // 网页路由，可以从这里找会显示出来的所有页面
       { path: "/", element: <HomePage /> },
       { path: "/blocks", element: <BlocksPage /> },
       { path: "/unconfirmedBlocks", element: <BlocksPage /> },
