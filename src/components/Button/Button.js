@@ -7,6 +7,7 @@
 import React, { PureComponent } from 'react';
 import './Button.less';
 
+// 按钮组件
 export default class Button extends PureComponent {
   render() {
     return (

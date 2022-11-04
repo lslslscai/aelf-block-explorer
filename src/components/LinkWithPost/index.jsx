@@ -6,6 +6,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { sendMessage } from '../../common/utils';
 
+// 也没人用了,似乎是一个超链接组件
 const LinkWithPost = (props) => {
   const {
     href,

@@ -10,6 +10,7 @@ import {
 } from '../../utils/utils';
 import './index.less';
 
+// 合约浏览器,但是似乎没人用了
 const IframeViewer = (props) => {
   const {
     match = {},

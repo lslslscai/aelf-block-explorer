@@ -8,6 +8,7 @@ import { If, Then, Else } from "react-if";
 import { DownOutlined } from "@ant-design/icons";
 import { numberFormatter } from "../../utils/formater";
 
+// 分栏组件
 const Dividends = (props) => {
   const { dividends, defaultSymbol, useButton = true, ...rest } = props;
   const keys = Object.keys(dividends);

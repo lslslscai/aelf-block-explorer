@@ -30,6 +30,7 @@ const arrFormate = function (arr) {
   return arr;
 };
 
+// vote部分的统计数据(倒计时等)
 export default class StatisticalData extends PureComponent {
   constructor(props) {
     super(props);

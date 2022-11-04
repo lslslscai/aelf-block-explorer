@@ -2,6 +2,8 @@ import React, { useMemo } from "react";
 import IconFont from "../IconFont/index";
 
 import "./StatusTag.style.less";
+
+// 状态tag,主要用于交易信息
 export default function StatusTag({ status }) {
   const statusObj = useMemo(
     () => ({

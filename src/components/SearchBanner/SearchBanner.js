@@ -9,6 +9,7 @@ import React, {
 import Search from '../Search/Search';
 import './SearchBanner.less';
 
+// 无人使用,作用未知
 export default class SearchBanner extends Component {
   render() {
     return (

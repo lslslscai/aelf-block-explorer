@@ -5,6 +5,7 @@ import { DownloadOutlined } from "@ant-design/icons";
 import { Button, message } from "antd";
 import { getZip } from "../../utils/file";
 
+// 下载组件
 const SaveAsFile = (props) => {
   const [loading, setIsLoading] = useState(false);
   const {

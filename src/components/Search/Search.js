@@ -12,6 +12,7 @@ import IconFont from "../IconFont";
 import "./search.styles.less";
 import { getHandleSearch } from "../../utils/search";
 
+// 搜索组件
 class Search extends PureComponent {
 
 

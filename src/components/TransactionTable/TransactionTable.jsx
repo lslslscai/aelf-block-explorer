@@ -8,6 +8,7 @@ import TableLayer from "../TableLayer/TableLayer";
 import ColumnConfig from "./columnConfig";
 import "./TransactionTable.styles.less";
 
+// 交易列表
 export default function TransactionTable({ dataLoading, dataSource }) {
   const [price, setPrice] = useState(0);
   const [timeFormat, setTimeFormat] = useState("Age");

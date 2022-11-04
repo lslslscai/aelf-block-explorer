@@ -13,6 +13,7 @@ const { TextArea } = Input;
 
 const DOWNLOAD_LIST = ["CodeCheckRequired"];
 
+// 负责log的序列化解码编码
 const EventItem = (props) => {
   const { Name } = props;
   const [result, setResult] = useState({ ...(props || {}) });
@@ -46,6 +47,7 @@ const EventItem = (props) => {
     <div className="event-item">
       {!DOWNLOAD_LIST.includes(Name) ? (
         <>
+          {/* log内容 */}
           <TextArea
             readOnly
             rows="6"
@@ -53,6 +55,7 @@ const EventItem = (props) => {
             value={JSON.stringify(result, null, 2)}
             className="event-item-text-area"
           />
+          {/* log解析按钮 */}
           <Button
             type="primary"
             onClick={() => {

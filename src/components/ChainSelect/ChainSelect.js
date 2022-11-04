@@ -13,6 +13,8 @@ import './ChainSelect.styles.less';
 import { CHAIN_ID } from '../../constants';
 
 const { Option } = Select;
+
+// 链选择器
 export default class ChainSelect extends Component {
   constructor() {
     super();

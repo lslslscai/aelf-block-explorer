@@ -84,6 +84,7 @@ const PreviewCard = ({ info, text, price = { USD: 0 } }) => {
   );
 };
 
+// 列布局(交易列表专用)
 export default (timeFormat, price, handleFormatChange) => {
   const isMobile = isPhoneCheck();
   return [

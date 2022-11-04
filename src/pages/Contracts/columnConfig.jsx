@@ -4,6 +4,7 @@ import moment from "moment";
 import React from "react";
 import AddressLink from "../../components/AddressLink";
 
+// 每一列的布局
 export default ({ isMobile }) => {
   return [
     {

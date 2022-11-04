@@ -5,6 +5,7 @@ import IconFont from "../../../components/IconFont";
 import useMobile from "../../../hooks/useMobile";
 import { getFormattedDate } from "../../../utils/timeUtils";
 
+// 最新区块和交易信息
 export default function LatestInfo({ blocks = [], transactions = [] }) {
   const isMobile = useMobile();
   return (

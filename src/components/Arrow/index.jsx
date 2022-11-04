@@ -9,6 +9,7 @@ import {
 
 const ButtonGroup = Button.Group;
 
+// 由于引用他的老版chain-info没用了,所以也就没用了.看代码似乎是一个换页标签
 const Arrow = (props) => {
   const {
     pre,

@@ -10,6 +10,7 @@ import './infoList.styles.less';
 
 SmoothScrollbar.use(OverscrollPlugin);
 
+//似乎也没人用了
 export default class InfoList extends React.PureComponent {
   constructor(props) {
     super(props);

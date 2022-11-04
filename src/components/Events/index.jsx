@@ -9,6 +9,7 @@ import CopyButton from "../CopyButton/CopyButton";
 import { Link } from "react-router-dom";
 import addressFormat from "../../utils/addressFormat";
 
+// 专门用于显示交易log的,
 const Events = (props) => {
   const { list } = props;
   return (

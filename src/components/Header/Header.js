@@ -358,6 +358,7 @@ class BrowserHeader extends PureComponent {
     );
   }
 
+  // 下拉菜单渲染(手机端专用)
   renderDrawerMenu(menuMode, showMenu = true) {
     const { chainList } = this.state
     return (

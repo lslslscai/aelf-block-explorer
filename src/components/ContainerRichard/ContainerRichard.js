@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 
 import './ContainerRichard.less';
 
+// 没有地方用到它
 export default class ContainerRichard extends Component {
   render() {
     // large | small

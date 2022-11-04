@@ -52,6 +52,7 @@ import { format, get } from '../../utils';
 import '../../assets/lib/shine';
 
 // The usage of ReactEchartsCore are same with above.
+// 无人引用,似乎是eChart实验品
 export default class TradeChart extends React.Component {
   constructor(props) {
     super(props);

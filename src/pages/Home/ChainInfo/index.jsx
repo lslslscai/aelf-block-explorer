@@ -71,7 +71,7 @@ const ChainInfo = (props) => {
   function next() {
     setArrowPage(currentArrowPage + 1);
   }
-
+  // 感觉没用了,最新布局在下面的components里面了
   return (
     <Row className="home-chain-info" gutter={gutter}>
       <Col sm={12} md={5}>

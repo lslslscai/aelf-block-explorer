@@ -1,5 +1,6 @@
 import React from "react";
 
+// 代码布局,用于显示json内容
 export default function CodeBlock({ value, rows = 8 }) {
   let jsonFormatted = value;
   try {

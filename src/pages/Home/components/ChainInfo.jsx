@@ -1,6 +1,7 @@
 import React, { useMemo } from "react";
 import IconFont from "../../../components/IconFont";
 
+// 链信息
 export default function ChainInfo({
   blockHeight,
   localTransactions,

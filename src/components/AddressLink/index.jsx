@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import config from "../../common/config";
 
+// 地址链接,点击地址前往对应详情
 const AddressLink = (props) => {
   const { address, suffix } = props;
 

@@ -5,6 +5,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 import PropTypes from 'prop-types';
 
+// 合约显示器的组件,但随着IframeViewer没人用,他也没人用了
 const IFrame = (props) => {
   const {
     url,

@@ -6,6 +6,8 @@ import { withRouter } from "../../routes/utils";
 import "./breadcrumb.styles.less";
 import addressFormat from "../../utils/addressFormat";
 
+
+
 // if you want to hide the Breadcrumb
 const NO_BREADCRUMB_PAGES = [
   "/vote",
@@ -141,6 +143,7 @@ const BREADCRUMB_NAMES_TATE = {
   },
 };
 
+// 面包屑,具备路由功能.但是在部分界面不显示
 class BrowserBreadcrumb extends Component {
   constructor(props) {
     super(props);

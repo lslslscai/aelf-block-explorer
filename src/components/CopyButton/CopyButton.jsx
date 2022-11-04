@@ -3,6 +3,7 @@ import copy from "copy-to-clipboard";
 import { message } from "antd";
 import IconFont from "../IconFont";
 
+// 复制按钮, 点击后可直接复制对应内容.
 export default function CopyButton({ value = undefined, onClick = undefined }) {
   const handleCopy = () => {
     try {

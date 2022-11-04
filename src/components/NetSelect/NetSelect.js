@@ -6,6 +6,7 @@ import IconFont from '../IconFont';
 
 const { Option } = Select;
 
+// 主网/测试网切换,手机端专用
 export default function NetSelect({ chainList }) {
   const selectChange = useCallback((val) => {
     const chainInfo = chainList.find((item) => item.chainId === val);

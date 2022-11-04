@@ -4,6 +4,7 @@ import './index.less';
 
 /* eslint-disable max-len */
 
+// 组件下载,作用和DownLoadPlugin一样(文本有所不同),在proposal里面使用
 const Plugin = () => (
   <div className="DownloadPlugins">
     <div className="Tips">

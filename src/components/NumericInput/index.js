@@ -19,6 +19,7 @@ function formatNumber(value) {
   return `${prefix}${result}${list[1] ? `.${list[1]}` : ''}`;
 }
 
+// 原本用在vote页面上的, 现在被注释掉了
 export default class NumericInput extends React.Component {
   onChange = (e) => {
     const { value } = e.target;

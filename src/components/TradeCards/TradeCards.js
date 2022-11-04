@@ -5,6 +5,7 @@ import { ELF_REALTIME_PRICE_URL } from '../../constants';
 
 import './tradecards.style.less';
 
+// 没有人引用
 export default class TradeCards extends Component {
   constructor(props) {
     super(props);

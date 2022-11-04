@@ -8,6 +8,7 @@ import { Row, Col } from 'antd';
 // import Button from '../Button/Button';
 import './DownloadPlugins.less';
 
+// 谷歌浏览器的AElf组件下载,在resource界面里面使用
 export default class DownloadPlugins extends PureComponent {
   getDownload() {
     console.log('下载');

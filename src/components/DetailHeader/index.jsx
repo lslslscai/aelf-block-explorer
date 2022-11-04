@@ -12,6 +12,7 @@ import {
 import PropTypes from 'prop-types';
 import { QuestionCircleOutlined } from '@ant-design/icons';
 
+// 账户详情头,但无处在使用
 const HeaderItem = (props) => {
   const {
     tip,

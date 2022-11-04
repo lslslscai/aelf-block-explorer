@@ -7,6 +7,7 @@ import React, { PureComponent } from 'react';
 // import svgList from '../../assets/svgList';
 import svgList from '../../assets/svgs';
 
+// 负责加载svg格式的图标
 export default class Svg extends PureComponent {
   constructor(props) {
     super(props);

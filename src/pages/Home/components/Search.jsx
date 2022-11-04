@@ -4,6 +4,7 @@ import IconFont from "../../../components/IconFont";
 import { withRouter } from "../../../routes/utils";
 import { getHandleSearch } from "../../../utils/search";
 
+// 搜索栏
 function Search(props) {
   const [value, setValue] = useState("");
   const { navigate } = props;

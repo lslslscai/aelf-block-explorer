@@ -5,6 +5,7 @@ import { NETWORK_TYPE } from '../../../config/config';
 
 import './footer.styles.less';
 
+//页脚
 const BrowserFooter = () => {
   const { pathname } = useLocation()
   const [isNoFooter, setIsNoFooter] = useState(false)
