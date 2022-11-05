@@ -3,6 +3,8 @@ import React, { useCallback, useMemo, useState } from "react";
 import TransactionTable from "../../../components/TransactionTable/TransactionTable";
 import useMobile from "../../../hooks/useMobile";
 
+
+// Blockchain->Block->Blocks下具体区块的页面Transactions页面
 export default function TransactionList({ allData = [] }) {
   const [pageIndex, setPageIndex] = useState(1);
   const [pageSize, setPageSize] = useState(10);

@@ -12,6 +12,8 @@ import getColumn from "./columnConfig";
 import "./Accounts.styles.less";
 import { VIEWER_ACCOUNT_LIST } from "../../api/url";
 
+
+// Blockchain->Address->Top Accounts页面展示逻辑，如只显示前1000条，设置一页显示25/50/100等
 export default function Accounts() {
   const isMobile = useMobile();
 

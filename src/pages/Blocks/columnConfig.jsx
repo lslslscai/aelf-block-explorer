@@ -5,6 +5,8 @@ import IconFont from "../../components/IconFont";
 import { SYMBOL, CHAIN_ID } from "../../../config/config";
 import { isPhoneCheck } from "../../utils/deviceCheck";
 
+
+// Blockchain->Block->Blocks区块列表页面
 export default (timeFormat, handleFormatChange) => {
   const isMobile = isPhoneCheck();
   return [

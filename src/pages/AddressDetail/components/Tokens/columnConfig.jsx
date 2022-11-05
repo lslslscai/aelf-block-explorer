@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import { numberFormatter } from "../../../../utils/formater";
-
+// Blockchain->Address->Contracts下具体合约Tokens页面
 export default ({ prices, isMobile }) => {
   return [
     {

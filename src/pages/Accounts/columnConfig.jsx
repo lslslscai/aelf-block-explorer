@@ -2,6 +2,8 @@ import React from "react";
 import AddressLink from "../../components/AddressLink";
 import { numberFormatter } from "../../utils/formater";
 
+// Blockchain->Address->Top Accounts页面
+
 export default ({ isMobile, preTotal }) => {
   return [
     {

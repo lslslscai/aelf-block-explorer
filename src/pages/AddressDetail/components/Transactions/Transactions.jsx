@@ -6,7 +6,7 @@ import useMobile from "../../../../hooks/useMobile";
 import { get } from "../../../../utils";
 
 import "./Transactions.styles.less";
-
+// Blockchain->Address->Contracts下具体合约Transactions页面
 export default function Transactions({ address }) {
   const isMobile = useMobile();
   const [dataLoading, setDataLoading] = useState(true);

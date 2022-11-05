@@ -6,6 +6,7 @@ import SaveAsFile from "../../../../components/Save";
 
 import "./Contract.styles.less";
 
+// Blockchain-Address-Contracts页面下具体合约Contract页面
 export default function Contract({
   contractInfo = { contractName: "-", files: "", address: "-", version: "-" },
   codeHash,

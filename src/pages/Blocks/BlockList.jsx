@@ -13,6 +13,8 @@ import ColumnConfig from "./columnConfig";
 import "./BlockList.styles.less";
 import TableLayer from "../../components/TableLayer/TableLayer";
 
+
+// Blockchain->Block->Blocks区块列表页面的逻辑
 export default function BlockList() {
   const { pathname = "" } = useLocation();
   const isMobile = useMobile();

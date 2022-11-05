@@ -8,6 +8,8 @@ import { useEffectOnce } from "react-use";
 import "./index.less";
 import CopyButton from "../../../../components/CopyButton/CopyButton";
 
+// Blockchain->Address->Contracts下具体合约的复制地址按钮
+
 const languageDetector = [
   {
     language: "csharp",

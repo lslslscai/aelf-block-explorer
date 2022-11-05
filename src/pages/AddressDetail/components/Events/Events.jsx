@@ -12,6 +12,7 @@ import { get } from "../../../../utils";
 
 import "./Events.styles.less";
 
+// Blockchain->Address->Contracts下具体合约Events页面
 export default function Events() {
   const { address } = useParams();
   const isMobile = useMobile();

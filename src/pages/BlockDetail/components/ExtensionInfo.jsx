@@ -2,6 +2,8 @@ import React from "react";
 import { useMemo } from "react";
 import CodeBlock from "../../../components/CodeBlock/CodeBlock";
 
+
+// Blockchain->Block->Blocks下具体区块的overview页面下点击查看扩展信心的按钮
 export default function ExtensionInfo({ extensionInfo }) {
   const renderObj = useMemo(
     () =>

@@ -9,7 +9,7 @@ import Dividends from "../../../../components/Dividends";
 import IconFont from "../../../../components/IconFont";
 import { getFormattedDate } from "../../../../utils/timeUtils";
 import { numberFormatter } from "../../../../utils/formater";
-
+// Blockchain->Address->Contracts下具体合约Transfers页面
 const getColumnConfig = ({
   address,
   isMobile,

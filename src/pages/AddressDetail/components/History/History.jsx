@@ -11,7 +11,7 @@ const EventMap = {
   AuthorChanged: "Author Changed",
   ContractDeployed: "Contract Deployed",
 };
-
+// Blockchain->Address->Contracts下具体合约History页面
 export default function History({ history }) {
   const StepDescription = (props) => {
     const { address, author, codeHash, txId, version, blockHeight, isLast } =

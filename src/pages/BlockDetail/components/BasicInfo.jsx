@@ -9,6 +9,7 @@ import CopyButton from "../../../components/CopyButton/CopyButton";
 import addressFormat from "../../../utils/addressFormat";
 import Dividends from "../../../components/Dividends";
 
+// Blockchain->Block->Blocks下具体区块的overview页面
 export default function BasicInfo({ basicInfo, bestChainHeight }) {
   const renderObj = useMemo(
     () =>
