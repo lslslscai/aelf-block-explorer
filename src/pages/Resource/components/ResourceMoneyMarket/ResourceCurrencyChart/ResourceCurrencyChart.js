@@ -3,7 +3,7 @@
  * @author zhouminghui
  * echarts
  */
-
+ //Governance->Resource页面中Resource Money Market
 import React, { PureComponent } from "react";
 import { connect } from "react-redux";
 import { Tabs, Button } from "antd";

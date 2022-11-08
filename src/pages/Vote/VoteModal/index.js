@@ -1,3 +1,4 @@
+//Governance->vote中投票模型
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Tabs, Modal, Form, Input, DatePicker, Button, Tooltip } from "antd";

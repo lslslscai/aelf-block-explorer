@@ -6,6 +6,7 @@
  * @LastEditTime: 2019-12-09 18:36:12
  * @Description: the page of election and nodes's notification
  */
+//Governance->vote页面Election Notification部分
 import React, { PureComponent } from "react";
 import { withRouter } from "../../../routes/utils";
 import Decimal from "decimal.js";

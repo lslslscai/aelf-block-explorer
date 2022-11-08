@@ -2,7 +2,7 @@
  * @file ResourceDetail
  * @author zhouminghui
  */
-
+//搜索构件
 import React, { PureComponent } from "react";
 import { Table } from "antd";
 import { get } from "../../utils";

@@ -2,7 +2,7 @@
  * @file RealTimeTransactions
  * @author zhouminghui
  */
-
+  //Governance->Resource页面中Real Time Transactions
 import React, { PureComponent } from "react";
 import { Row, Col, Divider } from "antd";
 import moment from "moment";

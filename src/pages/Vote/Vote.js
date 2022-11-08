@@ -6,6 +6,7 @@
  * @LastEditTime: 2019-12-10 16:56:29
  * @Description: pages for vote & election
  */
+//Governance->vote页面
 import React, { Component } from "react";
 import { Modal, Form, Input, message, Menu } from "antd";
 import { Route, Routes } from "react-router-dom";

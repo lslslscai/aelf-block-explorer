@@ -4,7 +4,7 @@
  * 233333
  * TODO: Vote && Resource To migrate out of Application
  */
-
+//Governance->Resource页面中
 import React, { Component } from "react";
 import { message } from "antd";
 import { connect } from "react-redux";

@@ -1,3 +1,4 @@
+//Governance->vote页面中MY Wallet部分
 import React, { Component } from 'react';
 import moment from 'moment';
 

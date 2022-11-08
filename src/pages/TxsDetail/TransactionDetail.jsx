@@ -1,3 +1,4 @@
+//交易细节返回
 import { Button, Tabs } from "antd";
 import React, { useMemo, useState } from "react";
 import { aelf, getContractNames } from "../../utils";

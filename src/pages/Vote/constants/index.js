@@ -10,7 +10,7 @@ import { thousandsComma } from '@utils/formater';
 // todo: handle the code as follow
 import { ELF_DECIMAL } from '@src/constants';
 
-//  The contracts need to load in page ElectionNotification
+//  合同需要在页面ElectionNotification中加载The contracts need to load in page ElectionNotification
 const contractsNeedToLoad = [
   {
     contractAddrValName: 'consensusDPoS',

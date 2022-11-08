@@ -6,6 +6,7 @@
  * @LastEditTime: 2020-01-08 15:44:44
  * @Description: file content
  */
+//Governance->vote页面中Node Election部分
 import React, { memo } from "react";
 import { withRouter } from "../../../../routes/utils";
 import { Button, Icon } from "antd";
