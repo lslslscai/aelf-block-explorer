@@ -304,7 +304,7 @@ class BrowserHeader extends PureComponent {
             </SubMenu>
           </>
         </SubMenu>
-
+{/* 
         <Menu.Item key='/token'>
           <Link to='/token'>Token</Link>
         </Menu.Item>
@@ -325,10 +325,11 @@ class BrowserHeader extends PureComponent {
           </Menu.Item>
           {voteHTML}
           {resourceHTML}
-        </SubMenu>
+        </SubMenu> */}
+
         {isPhone && <Divider className='divider-mobile' />}
         {isPhone && this.renderPhoneMenu()}
-        {isPhone && (
+        {/* {isPhone && (
           <Menu.Item key='/about'>
             <a
               href='https://www.aelf.io/'
@@ -338,7 +339,7 @@ class BrowserHeader extends PureComponent {
               About
             </a>
           </Menu.Item>
-        )}
+        )} */}
       </Menu>
     );
   }
@@ -440,9 +441,9 @@ class BrowserHeader extends PureComponent {
               )}
 
               {/* 右侧链列表 */}
-              {!this.isPhone && (
+              {/* {!this.isPhone && (
                 <ChainSelect chainList={chainList} />
-              )}
+              )} */}
             </nav>
           </div>
         </div>

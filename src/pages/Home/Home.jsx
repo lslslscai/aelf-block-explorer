@@ -196,7 +196,7 @@ export default function Home() {
         <Search />  {/* 搜素栏 */}
 
         {/* 如果是主链，且在手机端，汇率会显示在这里 */}
-        {CHAIN_ID === "AELF" && NETWORK_TYPE === "MAIN" && isMobile && (
+        {/* {CHAIN_ID === "AELF" && NETWORK_TYPE === "MAIN" && isMobile && (
           <div className="price-info">
             <img src={TokenIcon} />
             <span className="price">$ {price.USD}</span>
@@ -205,7 +205,7 @@ export default function Home() {
               {range.toFixed(2)}%
             </span>
           </div>
-        )}
+        )} */}
       </section>
       <div className="body-container">
 
@@ -224,10 +224,10 @@ export default function Home() {
         <section className="latest-section">{latestSection}</section>
 
         {/* TPS */}
-        <section className="chart-section">
+        {/* <section className="chart-section">
           <h3>Transactions Per Minute</h3>
           <TPSChart />
-        </section>
+        </section> */}
       </div>
     </div>
   );

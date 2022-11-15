@@ -21,10 +21,10 @@ const CHAINS_LINK_NAMES = {
   AELF: "Main chain AELF",
 };
 const WALLET_DOMAIN = "https://wallet-test.aelf.io/";
-const APPNAME = "explorer.aelf.io";
+const APPNAME = "explorer.H2Chain.io";
 const commonPrivateKey =
   "0000000000000000000000000000000000000000000000000000000000000001";
-const DEFAUTRPCSERVER = `${location.protocol}//${location.host}/chain`;
+const DEFAUTRPCSERVER = `${location.protocol}//${location.host}:8000`;
 
 module.exports = {
   DEFAUTRPCSERVER,

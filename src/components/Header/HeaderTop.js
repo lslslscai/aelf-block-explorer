@@ -74,7 +74,7 @@ export default function HeaderTop({
           />
 
           {/* 汇率 */}
-          {range !== "-" && (
+          {/* {range !== "-" && (
             <div className='price-container'>
               <img src={TokenIcon} alt="elf" />
               <span className='price'>$ {price.USD}</span>
@@ -83,7 +83,7 @@ export default function HeaderTop({
                 {range.toFixed(2)}%
               </span>
             </div>
-          )}
+          )} */}
         </div>
 
         {/* 右侧的导航栏 */}
@@ -95,7 +95,7 @@ export default function HeaderTop({
             mode={menuMode}
             onClick={menuClick}
           >
-            <SubMenu
+            {/* <SubMenu
               key='/Explorers'
               popupOffset={[0, -7]}
               popupClassName='common-header-submenu explorers-popup'
@@ -109,7 +109,17 @@ export default function HeaderTop({
               {networkList.map((item) => (
                 <MenuItem key={item.netWorkType}>{item.title}</MenuItem>
               ))}
-            </SubMenu>
+            </SubMenu> */}
+
+            <MenuItem key='/accounts'>
+              <a
+                href='https://www.aelf.io/'
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                Accounts
+              </a>
+            </MenuItem>
             <MenuItem key='/about'>
               <a
                 href='https://www.aelf.io/'
