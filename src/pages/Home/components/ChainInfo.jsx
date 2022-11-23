@@ -21,11 +21,11 @@ export default function ChainInfo({
         label: "Transactions",
         value: localTransactions.toLocaleString(),
       },
-      {
-        icon: "reward",
-        label: "Reward",
-        value: <p>{reward && (reward.ELF || 0).toLocaleString()} ELF</p>,
-      },
+      // {
+      //   icon: "reward",
+      //   label: "Reward",
+      //   value: <p>{reward && (reward.ELF || 0).toLocaleString()} ELF</p>,
+      // },
       {
         icon: "unconfirmedblocks",
         label: "Unconfirmed Blocks",
@@ -36,13 +36,13 @@ export default function ChainInfo({
         label: "Accounts",
         value: localAccounts,
       },
-      {
-        icon: "citizenwelfare",
-        label: "Citizen Welfare",
-        value: (
-          <p>{reward && ((reward.ELF || 0) * 0.75).toLocaleString()} ELF</p>
-        ),
-      },
+      // {
+      //   icon: "citizenwelfare",
+      //   label: "Citizen Welfare",
+      //   value: (
+      //     <p>{reward && ((reward.ELF || 0) * 0.75).toLocaleString()} ELF</p>
+      //   ),
+      // },
     ],
     [
       blockHeight,
