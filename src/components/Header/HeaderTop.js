@@ -25,7 +25,7 @@ export default function HeaderTop({
   const [price, setPrice] = useState({ USD: 0 });
   const [previousPrice, setPreviousPrice] = useState({ usd: 0 });
 
-  const range = useMemo(() => { // 货币价位及其变化
+  const range = useMemo(() => { // ==货币价位及其变化
     if (price.USD && previousPrice.usd) {
       return ((price.USD - previousPrice.usd) / previousPrice.usd) * 100;
     }
