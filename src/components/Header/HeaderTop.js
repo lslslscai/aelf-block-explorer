@@ -14,7 +14,7 @@ const TokenIcon = require("../../assets/images/tokenLogo.png");
 
 const { SubMenu, Item: MenuItem } = Menu;
 
-//这个影响的是最上面的一栏，包括图标、about之类的内容
+// 这个影响的是最上面的一栏，包括图标、about之类的内容
 export default function HeaderTop({
   headerClass,
   menuMode,
@@ -32,7 +32,7 @@ export default function HeaderTop({
     return "-";
   }, [price, previousPrice]);
 
-  useEffect(() => { //显示汇率，咱们可以不要
+  useEffect(() => { // 显示汇率，咱们可以不要
     if (CHAIN_ID === "AELF" && NETWORK_TYPE === "MAIN" && !isMobile) {
       const d = new Date()
       const day = d.getDate()
@@ -111,24 +111,7 @@ export default function HeaderTop({
               ))}
             </SubMenu> */}
 
-            <MenuItem key='/accounts'>
-              <a
-                href='https://www.aelf.io/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                Accounts
-              </a>
-            </MenuItem>
-            <MenuItem key='/about'>
-              <a
-                href='https://www.aelf.io/'
-                target='_blank'
-                rel='noopener noreferrer'
-              >
-                About
-              </a>
-            </MenuItem>
+
           </Menu>
         </div>
       </div>
