@@ -304,7 +304,7 @@ class BrowserHeader extends PureComponent {
             </SubMenu>
           </>
         </SubMenu>
-{/* 
+{/* 首栏的token和government的页面管理
         <Menu.Item key='/token'>
           <Link to='/token'>Token</Link>
         </Menu.Item>
